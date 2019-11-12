@@ -15,13 +15,25 @@ public class ExceptionsDemo {
 		//    call to testMethod1 with a try/catch block.
 		//    In the catch block, put a print statement so you know
 		//    if the code is being ran.
-		
+		try {
+			testMethod1(3);
+		} catch (Exception e) {
+			System.out.println("FAIL");
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		// 2. Now call testMethod1 with a value greater than 5. 
 		//    Running your program should not print the statement
 		//    in the catch block.
 		//    You can use the Exception class's printStackTrace() method
 		//    to print a list of methods that are currently in scope.
-		
+		try {
+			testMethod1(6);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("FAIL");
+		}
 		// 3. Create a new class called CustomException that extends Exception.
 		//    Add a void method called terminate that simply calls System.exit(0);
 		
